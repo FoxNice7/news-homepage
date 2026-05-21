@@ -20,7 +20,7 @@ header {
 }
 
 .sidebar {
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
 
@@ -194,6 +194,8 @@ main {
         background-color: transparent;
         width: 30%;
         height: 5rem;
+        transition: none;
+
     }
 
     .sidebar .nav {
@@ -210,11 +212,12 @@ main {
     main {
         width: 100%;
     }
-    .main-container{
+
+    .main-container {
         display: flex;
         gap: 1rem;
     }
-    
+
     .introduction {
         display: flex;
         justify-content: center;
@@ -228,24 +231,27 @@ main {
         width: 90%;
         height: 100%;
     }
-    .intro-text{
+
+    .intro-text {
         display: flex;
         width: 90%;
     }
-    .intro-text>h1{
+
+    .intro-text>h1 {
         font-size: 3rem;
     }
-    .intro-main-text>p{
+
+    .intro-main-text>p {
         font-size: 1.2rem;
     }
 
-    .intro-main-text{
+    .intro-main-text {
         display: flex;
         flex-direction: column;
         width: 90%;
     }
 
-    .news{
+    .news {
         height: 100%;
     }
 
