@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: ease-in-out 0.3s;
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger-menu {
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 20rem;
+    height: 100vh;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.sidebar nav>a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30rem;
+}
+
+.image-web-3-mobile {
+    background-image: url("assets/images/image-web-3-mobile.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30rem;
+}
+
+.introduction>h1 {
+    width: 60%;
+    font-size: 3rem;
+    align-self: flex-start;
+    font-weight: 900;
+}
+
+.introduction>p {
+    font-weight: 200;
+}
+
+.intro-main-text>button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    align-self: flex-start;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: rgba(242, 92, 81);
+    border: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20rem;
+    background-color: rgba(0, 0, 26);
+    padding: 1rem;
+    color: white;
+}
+
+.news>h2 {
+    color: rgba(232, 168, 83);
+}
+
+.new {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.new>p {
+    font-weight: 100;
+}
+
+.questions {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 1rem;
+}
+
+.question {
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    gap: 1rem;
+}
+
+.question>figure>img {
+    height: 100%;
+}
+
+.question .number {
+    color: rgba(233, 90, 80);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.question .text {
+    font-weight: 200;
+}
+
+.question .text>h4 {
+    font-weight: 900;
+}
+
+@media (min-width: 758px) {
+    header {
+        display: flex;
+        height: 5rem;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .sidebar {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(0);
+        background-color: transparent;
+        width: 30%;
+        height: 5rem;
+    }
+
+    .sidebar .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .sidebar .close {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+    .main-container{
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .introduction {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        height: 30rem;
+    }
+
+    .introduction .image-web-3-mobile {
+        background-image: url("assets/images/image-web-3-desktop.jpg");
+        background-repeat: no-repeat;
+        width: 90%;
+        height: 100%;
+    }
+    .intro-text{
+        display: flex;
+        width: 90%;
+    }
+    .intro-text>h1{
+        font-size: 3rem;
+    }
+    .intro-main-text>p{
+        font-size: 1.2rem;
+    }
+
+    .intro-main-text{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .news{
+        height: 100%;
+    }
+
+    .questions {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+        gap: 1rem;
+    }
+
+
+}
